@@ -1,58 +1,23 @@
 import numpy as np
-import csv
+import math
+import glob
+import operator
 from itertools import product
-from sklearn import datasets
-from sklearn.cross_validation import train_test_split
+from sklearn.cross_validation import train_test_split, StratifiedShuffleSplit, PredefinedSplit
 from sklearn.grid_search import GridSearchCV
-from sklearn.metrics import classification_report
-from sklearn.svm import SVC
-from sklearn import grid_search
-from sklearn import svm
-from sklearn import datasets
-from sklearn.svm import SVC
-from sklearn.preprocessing import StandardScaler, MinMaxScaler
-from sklearn.datasets import load_iris
-from sklearn.cross_validation import StratifiedShuffleSplit
-from sklearn.grid_search import GridSearchCV
-from sklearn.metrics import matthews_corrcoef, make_scorer, f1_score
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn import svm, datasets
-from sklearn.metrics import precision_recall_curve
-from sklearn.metrics import average_precision_score
-from sklearn.cross_validation import train_test_split
-from sklearn.preprocessing import label_binarize
-from sklearn.multiclass import OneVsRestClassifier
-from sklearn.svm import SVR
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn import datasets
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from sklearn.cross_validation import PredefinedSplit
-from sklearn.neighbors import NearestNeighbors
+from sklearn.metrics import matthews_corrcoef, make_scorer, f1_score, precision_recall_curve, average_precision_score
+from sklearn.model_selection import KFold, LeaveOneOut, GridSearchCV
 from keras.layers.normalization import BatchNormalization
 from keras.optimizers import RMSprop, Adam
 from keras.layers.core import Dropout, Dense, Activation
-from sklearn.model_selection import KFold, LeaveOneOut
-import pandas as pd
 from keras import regularizers
-import math
-import glob
-import numpy as np
-np.random.seed(1337)
 from keras import optimizers
 from keras.preprocessing import sequence
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Embedding
 from keras.layers import MaxoutDense
-from keras.layers import LSTM
-from sklearn.model_selection import GridSearchCV
-import itertools
-import operator
 from keras.models import model_from_json
-
+np.random.seed(1337)
 
 MCCValue=make_scorer(matthews_corrcoef)
 
