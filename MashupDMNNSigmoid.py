@@ -62,10 +62,7 @@ parameters = [
     [0.05],
     [500],
     [700],
-    [800],
-    ['tanh'],
-    ['tanh'],
-    ['tanh']
+    [800]
 ]
 
 for element in itertools.product(*parameters):
