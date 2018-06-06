@@ -19,9 +19,9 @@ University College London
 ---------------------------------------------------------------
 # Running 
 
-Step 1. Generating network-embedding representations using Mashup [1] or node2vec [2] scripts;
+- Step 1. Generating network-embedding representations using Mashup [1] or node2vec [2] scripts;
         - [1] Cho et al., (2016) Compact Integration of Multi-Network Topology for Functional Analysis of Genes, Cell Systems, 3
 , 540–548.
         - [2] Grover A. and Leskovec, J., (2016) node2vec: Scalable Feature Learning for Networks, ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD). 
 
-Step 2. Learning functional representations using 
+- Step 2. Learning functional representations using 
