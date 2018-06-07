@@ -75,22 +75,29 @@ model2.add(BatchNormalization(weights=model.layers[4].get_weights()))
 model2.add(Dropout(0.5))
 model2.add(MaxoutDense(800, nb_feature=3, weights=model.layers[6].get_weights(), input_dim=700))
 
+#----------------input embeddings of training dataset to obtain the functional representations of training dataset-----------
+fileListFeaturesTrainingSVM=glob.glob("./Training_Mashup_Embeddings.txt")
+outputDMNNGeneratedFeaturesTraining = open("./Training_STRING2GO_Functional_Representations.txt", 'w')
 
+with open(fileListFeaturesTrainingSVM[0], 'r') as infileFeatureTrainingSVM:
+    MatrixFeaturesTrainingSVM1 = [list(x.split(",")) for x in infileFeatureTrainingSVM]
+    MatrixFeaturesTrainingSVM2 = [line[0:800] for line in MatrixFeaturesTrainingSVM1[:]]
+    MatrixFeaturesTrainingSVM = [[float(y) for y in x] for x in MatrixFeaturesTrainingSVM2]
+    infile.close()
+
+LearnedFeaturesTraining = model2.predict(MatrixFeaturesTrainingSVM)
+
+for index1 in range(0,len(LearnedFeaturesTraining)):
+    for index2 in range(0,len(LearnedFeaturesTraining[0])):
+        outputDMNNGeneratedFeaturesTraining.write(str(LearnedFeaturesTraining[index1][index2]))
+        outputDMNNGeneratedFeaturesTraining.write(",")
+    outputDMNNGeneratedFeaturesTraining.write("\n")
+outputDMNNGeneratedFeaturesTraining.flush()
+outputDMNNGeneratedFeaturesTraining.close() 
+
+#----------------input embeddings of testing dataset to obtain the functional representations of testing dataset-----------
 fileListFeaturesTestingSVM=glob.glob("./Testing_Mashup_Embeddings.txt")
 outputDMNNGeneratedFeaturesTesting = open("./Testing_STRING2GO_Functional_Representations.txt", 'w')
-
-#----------------input embeddings of training dataset to obtain the functional representations of training dataset-----------
-#fileListFeaturesTestingSVM=glob.glob("./Training_Mashup_Embeddings.txt")
-#outputDMNNGeneratedFeaturesTesting = open("./Training_STRING2GO_Functional_Representations.txt", 'w')
-
-
-with open("./BPTerms.txt") as GONameFile:
-    GOName1=GONameFile.readlines()
-
-GOName2=[]
-for ss in range(0,len(GOName1)):
-    GOName2.append("GO"+GOName1[ss].split(":")[1].rstrip())
-print(GOName2[0:])
 
 with open(fileListFeaturesTestingSVM[0], 'r') as infileFeatureTestingSVM:
     MatrixFeaturesTestingSVM1 = [list(x.split(",")) for x in infileFeatureTestingSVM]
