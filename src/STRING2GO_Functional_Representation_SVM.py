@@ -10,10 +10,10 @@ from sklearn.metrics import make_scorer, f1_score
 np.random.seed(1337)  # for reproducibility
 
 F1Score=make_scorer(f1_score)
-fileListFeatureLargePart=glob.glob("./Functional_Representation_Training.txt")
+fileListFeatureLargePart=glob.glob("./Training_STRING2GO_Functional_Representation.txt")
 fileListLabelsTrainingSVM=glob.glob("./Training_Label/*")
-fileListFeaturesTestingSVM=glob.glob("./Functional_Representation_Testing.txt")
-ProteinList=glob.glob("./ProteinList_Testing.txt")
+fileListFeaturesTestingSVM=glob.glob("./Testing_STRING2GO_Functional_Representation.txt")
+ProteinList=glob.glob("./Testing_ProteinList.txt")
 outputPrediction = open("./Prediction.txt", 'w')
 
 with open(fileListFeatureLargePart[0], 'r') as infile:
@@ -41,18 +41,6 @@ with open(fileListFeaturesTestingSVM[0], 'r') as infileFeatureTestingSVM:
     infile.close()
 
 for a in range(0,len(GOName2)):
-  print(GOName2[a])
-  FeatureTrainTrainingSVM=[]
-  MatrixclassTrainingSVM=[]
-  RealMatrixClass=[]
-  predefined_test_fold=[]
-  AllMCCCV = []
-  AllF1CV=[]
-  AllTPCV=[]
-  AllTNCV=[]
-  AllPRECV=[]
-  AllRECCV=[]
-
   for c in range(0,len(fileListLabelsTrainingSVM)):
               if GOName2[a] in fileListLabelsTrainingSVM[c] and "Labels" in fileListLabelsTrainingSVM[c]:
                   with open(fileListLabelsTrainingSVM[c], 'r') as infileClassSVMTraining:
