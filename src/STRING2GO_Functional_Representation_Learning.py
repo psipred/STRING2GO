@@ -45,7 +45,7 @@ parameters = [
     [0.05],
     [700],
     [700],
-    [800],
+    [800]
 ]
 
 for element in itertools.product(*parameters):
