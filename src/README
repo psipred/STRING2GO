@@ -1,2 +1,8 @@
 Python Scripts
 --------------
+
+- STRING2GO_Embedding_Sigmoid.py # Protein function prediction using the functional representations with the sigmoid function in the output layer of Deep Maxout Neural Networks.
+
+- STRING2GO_Functional_Representation_Learning.py # Learning functional representations using Deep Maxout Neural Networks with network-embeddings as the inputs.
+
+- STRING2GO_Functional_Representation_SVM.py # Protein function prediction using the functional representations with a library of Support Vector Machines.
