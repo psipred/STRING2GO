@@ -24,6 +24,6 @@ University College London
 , 540–548.
   - [2] Grover A. and Leskovec, J., (2016) node2vec: Scalable Feature Learning for Networks, ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD). 
 
-- Step 2. Learning functional representations using `./src/learningRepresentations.py`. 
+- Step 2. Learning functional representations using `./src/STRING2GO_Functional_Representation_Learning.py`. 
 
-- Step 3. Training support vector machine library for predicting protein function.
+- Step 3. Training support vector machine library for predicting protein function using `STRING2GO_Functional_Representation_SVM.py`.
