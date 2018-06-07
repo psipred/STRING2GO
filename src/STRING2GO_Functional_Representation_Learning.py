@@ -79,6 +79,11 @@ model2.add(MaxoutDense(800, nb_feature=3, weights=model.layers[6].get_weights(),
 fileListFeaturesTestingSVM=glob.glob("./Testing_Mashup_Embeddings.txt")
 outputDMNNGeneratedFeaturesTesting = open("./Testing_STRING2GO_Functional_Representations.txt", 'w')
 
+#----------------input embeddings of training dataset to obtain the functional representations of training dataset-----------
+#fileListFeaturesTestingSVM=glob.glob("./Training_Mashup_Embeddings.txt")
+#outputDMNNGeneratedFeaturesTesting = open("./Training_STRING2GO_Functional_Representations.txt", 'w')
+
+
 with open("./BPTerms.txt") as GONameFile:
     GOName1=GONameFile.readlines()
 
