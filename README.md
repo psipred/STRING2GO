@@ -2,11 +2,7 @@
 
 This is a Keras implementation of STRING2GO method reported in a submitted paper:
 
-STRING2GO: Learning Functional Representations Directly from STRING Network Topology with Deep Maxout Neural Networks for Protein Function Prediction
-
-Cen Wan, Domenico Cozzetto, Rui Fa and David T. Jones
-
-University College London
+Wan, C. Cozzetto, D. Fa, R. and Jones, D.T. (2018) Using Deep Maxout Neural Networks to Improve the Accuracy of Function Prediction from Protein Interaction Networks. bioRxiv: 10.1101/499244.
 
 ---------------------------------------------------------------
 # Requirements
