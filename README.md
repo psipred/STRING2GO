@@ -1,8 +1,8 @@
 # STRING2GO
 
-This is a Keras implementation of STRING2GO method reported in a submitted paper:
+This is a Keras implementation of STRING2GO method reported in a published paper:
 
-Wan, C. Cozzetto, D. Fa, R. and Jones, D.T. (2018) Using Deep Maxout Neural Networks to Improve the Accuracy of Function Prediction from Protein Interaction Networks. bioRxiv: 10.1101/499244.
+Wan, C. Cozzetto, D. Fa, R. and Jones, D.T. (2019) Using Deep Maxout Neural Networks to Improve the Accuracy of Function Prediction from Protein Interaction Networks. PLoS One, 14(7): e0209958.
 
 ---------------------------------------------------------------
 # Requirements
